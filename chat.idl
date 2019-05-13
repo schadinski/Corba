@@ -1,0 +1,32 @@
+module ChatApplication{
+
+
+	struct ChatMessage{
+		string nickname;
+		string text;
+	};
+
+	typedef sequence<ChatMessage> chathistory;
+
+	interface Client{
+		void message(in ChatMessage msg);
+		void join(in ChatMessage msg);
+		void leave(in ChatMessage msg);
+		void putHistory(in chathistory history);
+	};
+
+	interface History{
+		chathistory getNMessages(in unsigned short numberOfmessages);
+		void message(in ChatMessage message);
+	};
+
+	interface Server{
+		boolean attach(in string nickname,in Client ref);
+		boolean detach(in string nickname);
+		boolean attachHistory(in History ref);
+		void notify(in ChatMessage msg);
+	};
+
+
+};
+
