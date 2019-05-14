@@ -1,4 +1,4 @@
-package Server;
+//package Server;
 
 import ChatApplication.*;
 import org.omg.PortableServer.*;
