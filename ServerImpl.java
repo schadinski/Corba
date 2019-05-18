@@ -29,6 +29,7 @@ class ServerImpl extends ServerPOA
     // a new member joined the chat
     public boolean attach(String nickname, ChatApplication.Client newRef) 
     {
+        System.out.println("Client attaching\n");
         boolean ret = true;
         if( allClients.containsKey(nickname) )
         {
@@ -84,7 +85,7 @@ class ServerImpl extends ServerPOA
 
     // a member wrote a new message
     // send it to all clients and history server
-    public void _notify(ChatApplication.ChatMessage msg)
+    public void notify(ChatApplication.ChatMessage msg)
     {
         chatHistory.message(msg);
         if (!allClients.isEmpty()){

@@ -68,7 +68,7 @@ public abstract class ServerPOA extends org.omg.PortableServer.Servant
        case 3:  // ChatApplication/Server/_notify
        {
          ChatApplication.ChatMessage msg = ChatApplication.ChatMessageHelper.read (in);
-         this._notify (msg);
+         this.notify (msg);
          out = $rh.createReply();
          break;
        }

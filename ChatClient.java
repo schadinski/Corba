@@ -58,7 +58,7 @@ public class ChatClient
           }
           else
           {
-            server._notify(chatMsg);
+            server.notify(chatMsg);
           }  
         }  
       }

@@ -72,7 +72,7 @@ public class _ServerStub extends org.omg.CORBA.portable.ObjectImpl implements Ch
             }
   } // attachHistory
 
-  public void _notify (ChatApplication.ChatMessage msg)
+  public void notify (ChatApplication.ChatMessage msg)
   {
             org.omg.CORBA.portable.InputStream $in = null;
             try {
@@ -85,7 +85,7 @@ public class _ServerStub extends org.omg.CORBA.portable.ObjectImpl implements Ch
                 String _id = $ex.getId ();
                 throw new org.omg.CORBA.MARSHAL (_id);
             } catch (org.omg.CORBA.portable.RemarshalException $rm) {
-                _notify (msg        );
+                notify (msg        );
             } finally {
                 _releaseReply ($in);
             }

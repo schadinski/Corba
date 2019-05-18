@@ -13,5 +13,5 @@ public interface ServerOperations
   boolean attach (String nickname, ChatApplication.Client ref);
   boolean detach (String nickname);
   boolean attachHistory (ChatApplication.History ref);
-  void _notify (ChatApplication.ChatMessage msg);
+  void notify (ChatApplication.ChatMessage msg);
 } // interface ServerOperations
