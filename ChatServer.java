@@ -4,6 +4,7 @@ import ChatApplication.*;
 import org.omg.PortableServer.*;
 import org.omg.CosNaming.*;
 import org.omg.CORBA.*;
+import org.omg.*;
 
 public class ChatServer {
     public static void main(String args[]) {
@@ -15,7 +16,7 @@ public class ChatServer {
         // get reference to rootpoa and activate the POAManager
         POA rootpoa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
         rootpoa.the_POAManager().activate();
-  
+
         // create servant and register it with the ORB
         ServerImpl serverImpl = new ServerImpl();
         serverImpl.setORB(orb); 

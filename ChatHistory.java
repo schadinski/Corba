@@ -4,6 +4,7 @@ import ChatApplication.*;
 import org.omg.PortableServer.*;
 import org.omg.CosNaming.*;
 import org.omg.CORBA.*;
+import org.omg.*;
 
 //import java.lang.Thread;
 
